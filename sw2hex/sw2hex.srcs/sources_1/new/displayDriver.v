@@ -9,7 +9,7 @@ module displayDriver(
     input [31:0] value,
     output [7:0] NOTan, 		// Digit enable (select)
     output [6:0] seg
-    );
+);
 
 	wire [7:0] an;
 
