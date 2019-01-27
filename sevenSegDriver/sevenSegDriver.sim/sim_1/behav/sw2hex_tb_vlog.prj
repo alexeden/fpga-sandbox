@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../sevenSegDriver.srcs/sources_1/new/tflipflop.v"
+verilog xil_defaultlib  "../../../sevenSegDriver.srcs/sources_1/imports/new/clockDivider.v"
+verilog xil_defaultlib  "../../../sevenSegDriver.srcs/sources_1/imports/new/displayDriver.v"
+verilog xil_defaultlib  "../../../sevenSegDriver.srcs/sources_1/imports/new/sw2hex.v"
+verilog xil_defaultlib  "../../../sevenSegDriver.srcs/sim_1/imports/new/sw2hex_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"

@@ -1,0 +1,492 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:32:59 MDT 2014
+| Date         : Sat Dec 27 09:54:13 2014
+| Host         : eden-qosmio-ubuntu running 64-bit Ubuntu 14.10
+| Command      : report_clock_utilization -file clockSpeedControl_clock_utilization_placed.rpt
+| Design       : clockSpeedControl
+| Device       : xc7a100t
+-----------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Details of Global Clocks
+3. Details of Regional Clocks
+4. Details of Multi-Regional Clocks
+5. Details of I/O Clocks
+6. Details of Local Clocks
+7. Clock Regions : Key Resource Utilization
+8. Net wise resources used in clock region X1Y1
+
+1. Clock Primitive Utilization
+------------------------------
+
++-------+------+-----------+-----------+
+| Type  | Used | Available | Num Fixed |
++-------+------+-----------+-----------+
+| BUFG  |    2 |        32 |         0 |
+| BUFH  |    0 |        96 |         0 |
+| BUFIO |    0 |        24 |         0 |
+| MMCM  |    0 |         6 |         0 |
+| PLL   |    0 |         6 |         0 |
+| BUFR  |    0 |        24 |         0 |
+| BUFMR |    0 |        12 |         0 |
++-------+------+-----------+-----------+
+
+
+2. Details of Global Clocks
+---------------------------
+
++-------+------------------------+-------------------+--------------+-------+---------------+-----------+
+|       |                        |                   |   Num Loads  |       |               |           |
++-------+------------------------+-------------------+------+-------+-------+---------------+-----------+
+| Index | BUFG Cell              | Net Name          | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+------------------------+-------------------+------+-------+-------+---------------+-----------+
+|     1 | clk_IBUF_BUFG_inst     | clk_IBUF_BUFG     |    2 |     2 |    no |         1.848 |     0.129 |
+|     2 | led_OBUF_BUFG[15]_inst | led_OBUF_BUFG[15] |   33 |     9 |    no |         2.876 |     1.157 |
++-------+------------------------+-------------------+------+-------+-------+---------------+-----------+
+
+
+3. Details of Regional Clocks
+-----------------------------
+
+4. Details of Multi-Regional Clocks
+-----------------------------------
+
+5. Details of I/O Clocks
+------------------------
+
+6. Details of Local Clocks
+--------------------------
+
++-------+-----------------------------------------+--------------------------------------+--------------+-------+---------------+-----------+
+|       |                                         |                                      |   Num Loads  |       |               |           |
++-------+-----------------------------------------+--------------------------------------+------+-------+-------+---------------+-----------+
+| Index | Local Clk Src                           | Net Name                             | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+-----------------------------------------+--------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | display/cd/genblk1[0].dividers.d/Q_reg  | display/cd/genblk1[0].dividers.d/O1  |    2 |     2 |    no |         0.648 |     0.177 |
+|     2 | display/cd/genblk1[10].dividers.d/Q_reg | display/cd/genblk1[10].dividers.d/O1 |    2 |     2 |    no |         0.685 |     0.403 |
+|     3 | display/cd/genblk1[11].dividers.d/Q_reg | display/cd/genblk1[11].dividers.d/O1 |    2 |     2 |    no |         0.497 |     0.049 |
+|     4 | display/cd/genblk1[1].dividers.d/Q_reg  | display/cd/genblk1[1].dividers.d/O1  |    2 |     2 |    no |         0.487 |     0.205 |
+|     5 | display/cd/genblk1[2].dividers.d/Q_reg  | display/cd/genblk1[2].dividers.d/O1  |    2 |     2 |    no |         0.505 |     0.170 |
+|     6 | display/cd/genblk1[3].dividers.d/Q_reg  | display/cd/genblk1[3].dividers.d/O1  |    2 |     2 |    no |         0.688 |     0.364 |
+|     7 | display/cd/genblk1[4].dividers.d/Q_reg  | display/cd/genblk1[4].dividers.d/O1  |    2 |     2 |    no |         0.685 |     0.350 |
+|     8 | display/cd/genblk1[5].dividers.d/Q_reg  | display/cd/genblk1[5].dividers.d/O1  |    2 |     2 |    no |         0.592 |     0.120 |
+|     9 | display/cd/genblk1[6].dividers.d/Q_reg  | display/cd/genblk1[6].dividers.d/O1  |    2 |     2 |    no |         0.596 |     0.314 |
+|    10 | display/cd/genblk1[7].dividers.d/Q_reg  | display/cd/genblk1[7].dividers.d/O1  |    2 |     2 |    no |         0.455 |     0.173 |
+|    11 | display/cd/genblk1[8].dividers.d/Q_reg  | display/cd/genblk1[8].dividers.d/O1  |    2 |     2 |    no |         0.458 |     0.176 |
+|    12 | display/cd/genblk1[9].dividers.d/Q_reg  | display/cd/genblk1[9].dividers.d/O1  |    2 |     2 |    no |         0.447 |     0.165 |
+|    13 | clocks/dividers[0].d/Q_reg              | clocks/dividers[0].d/clockdivs[0]    |    3 |     3 |    no |         0.685 |     0.403 |
+|    14 | clocks/dividers[10].d/Q_reg             | clocks/dividers[10].d/clockdivs[0]   |    3 |     3 |    no |         0.954 |     0.483 |
+|    15 | clocks/dividers[11].d/Q_reg             | clocks/dividers[11].d/clockdivs[0]   |    3 |     2 |    no |         0.458 |     0.176 |
+|    16 | clocks/dividers[12].d/Q_reg             | clocks/dividers[12].d/clockdivs[0]   |    3 |     2 |    no |         0.647 |     0.313 |
+|    17 | clocks/dividers[13].d/Q_reg             | clocks/dividers[13].d/clockdivs[0]   |    3 |     3 |    no |         0.991 |     0.520 |
+|    18 | clocks/dividers[14].d/Q_reg             | clocks/dividers[14].d/clockdivs[0]   |    3 |     3 |    no |         0.961 |     0.489 |
+|    19 | clocks/dividers[15].d/Q_reg             | clocks/dividers[15].d/clockdivs[0]   |    3 |     3 |    no |         0.653 |     0.181 |
+|    20 | clocks/dividers[16].d/Q_reg             | clocks/dividers[16].d/clockdivs[0]   |    3 |     3 |    no |         0.645 |     0.173 |
+|    21 | clocks/dividers[17].d/Q_reg             | clocks/dividers[17].d/clockdivs[0]   |    3 |     3 |    no |         0.944 |     0.662 |
+|    22 | clocks/dividers[18].d/Q_reg             | clocks/dividers[18].d/clockdivs[0]   |    3 |     3 |    no |         0.955 |     0.673 |
+|    23 | clocks/dividers[19].d/Q_reg             | clocks/dividers[19].d/clockdivs[0]   |    3 |     3 |    no |         0.499 |     0.092 |
+|    24 | clocks/dividers[1].d/Q_reg              | clocks/dividers[1].d/clockdivs[0]    |    3 |     3 |    no |         0.791 |     0.319 |
+|    25 | clocks/dividers[20].d/Q_reg             | clocks/dividers[20].d/clockdivs[0]   |    3 |     2 |    no |         0.724 |     0.442 |
+|    26 | clocks/dividers[21].d/Q_reg             | clocks/dividers[21].d/clockdivs[0]   |    3 |     2 |    no |         0.999 |     0.665 |
+|    27 | clocks/dividers[22].d/Q_reg             | clocks/dividers[22].d/clockdivs[0]   |    3 |     3 |    no |         0.869 |     0.451 |
+|    28 | clocks/dividers[23].d/Q_reg             | clocks/dividers[23].d/clockdivs[0]   |    3 |     2 |    no |         0.487 |     0.205 |
+|    29 | clocks/dividers[24].d/Q_reg             | clocks/dividers[24].d/clockdivs[0]   |    3 |     2 |    no |         0.742 |     0.407 |
+|    30 | clocks/dividers[25].d/Q_reg             | clocks/dividers[25].d/clockdivs[0]   |    3 |     3 |    no |         0.930 |     0.648 |
+|    31 | clocks/dividers[26].d/Q_reg             | clocks/dividers[26].d/clockdivs[0]   |    3 |     3 |    no |         0.862 |     0.390 |
+|    32 | clocks/dividers[27].d/Q_reg             | clocks/dividers[27].d/clockdivs[0]   |    3 |     3 |    no |         0.718 |     0.436 |
+|    33 | clocks/dividers[28].d/Q_reg             | clocks/dividers[28].d/clockdivs[0]   |    3 |     3 |    no |         0.737 |     0.265 |
+|    34 | clocks/dividers[29].d/Q_reg             | clocks/dividers[29].d/clockdivs[0]   |    3 |     3 |    no |         1.111 |     0.829 |
+|    35 | clocks/dividers[2].d/Q_reg              | clocks/dividers[2].d/clockdivs[0]    |    3 |     3 |    no |         0.954 |     0.672 |
+|    36 | clocks/dividers[3].d/Q_reg              | clocks/dividers[3].d/clockdivs[0]    |    3 |     2 |    no |         0.648 |     0.363 |
+|    37 | clocks/dividers[4].d/Q_reg              | clocks/dividers[4].d/clockdivs[0]    |    3 |     2 |    no |         0.645 |     0.321 |
+|    38 | clocks/dividers[5].d/Q_reg              | clocks/dividers[5].d/clockdivs[0]    |    3 |     3 |    no |         0.800 |     0.518 |
+|    39 | clocks/dividers[6].d/Q_reg              | clocks/dividers[6].d/clockdivs[0]    |    3 |     3 |    no |         0.990 |     0.518 |
+|    40 | clocks/dividers[7].d/Q_reg              | clocks/dividers[7].d/I1[0]           |    3 |     3 |    no |         0.678 |     0.396 |
+|    41 | clocks/dividers[8].d/Q_reg              | clocks/dividers[8].d/I1[0]           |    3 |     3 |    no |         0.733 |     0.451 |
+|    42 | clocks/dividers[9].d/Q_reg              | clocks/dividers[9].d/I1[0]           |    3 |     3 |    no |         0.851 |     0.569 |
+|    43 | clocks/first/Q_reg                      | clocks/first/I1[0]                   |    3 |     3 |    no |         0.678 |     0.396 |
+|    44 | display/cd/genblk1[12].dividers.d/Q_reg | display/cd/genblk1[12].dividers.d/O1 |    5 |     3 |    no |         1.676 |     1.204 |
++-------+-----------------------------------------+--------------------------------------+------+-------+-------+---------------+-----------+
+
+
+7. Clock Regions : Key Resource Utilization
+-------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E1   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |    0 | 12000 |    0 |  2200 |    0 |    40 |    0 |    20 |    0 |    40 |
+| X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   80 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     1 |    0 |     0 |    0 |     0 |    0 | 10800 |    0 |  2000 |    0 |    30 |    0 |    15 |    0 |    40 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* RAMB36 site can be used as two RAMB18/FIFO18 sites
+
+
+8. Net wise resources used in clock region X1Y1
+-----------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |   Clock Net Name  |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   2 |     0 |        0 | clk_IBUF_BUFG     |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  32 |     0 |        0 | led_OBUF_BUFG[15] |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------+
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y16 [get_cells clk_IBUF_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y0 [get_cells led_OBUF_BUFG[15]_inst]
+
+# Location of IO Clock Primitives
+
+# Location of MMCM Clock Primitives
+
+# Location of BUFH Clock Primitives
+
+# Location of BUFR Clock Primitives
+
+# Location of BUFMR Clock Primitives
+
+# Location of PLL Clock Primitives
+
+# Location of IO Primitives which is load of clock spine
+set_property LOC IOB_X1Y70 [get_cells led_OBUF[15]_inst]
+set_property LOC IOB_X1Y69 [get_cells led_OBUF[14]_inst]
+
+# Location of clock ports
+set_property LOC IOB_X1Y126 [get_ports clk]
+
+# Clock net "clk_IBUF_BUFG" driven by instance "clk_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y16"
+#startgroup
+create_pblock CLKAG_clk_IBUF_BUFG
+add_cells_to_pblock [get_pblocks  CLKAG_clk_IBUF_BUFG] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_IBUF_BUFG"}]]]
+resize_pblock [get_pblocks CLKAG_clk_IBUF_BUFG] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[0].d/clockdivs[0]" driven by instance "clocks/dividers[0].d/Q_reg" located at site "SLICE_X89Y54"
+#startgroup
+create_pblock CLKAG_clocks/dividers[0].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[0].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[0].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[0].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[10].d/clockdivs[0]" driven by instance "clocks/dividers[10].d/Q_reg" located at site "SLICE_X86Y55"
+#startgroup
+create_pblock CLKAG_clocks/dividers[10].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[10].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[10].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[10].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[11].d/clockdivs[0]" driven by instance "clocks/dividers[11].d/Q_reg" located at site "SLICE_X85Y56"
+#startgroup
+create_pblock CLKAG_clocks/dividers[11].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[11].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[11].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[11].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[12].d/clockdivs[0]" driven by instance "clocks/dividers[12].d/Q_reg" located at site "SLICE_X86Y56"
+#startgroup
+create_pblock CLKAG_clocks/dividers[12].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[12].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[12].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[12].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[13].d/clockdivs[0]" driven by instance "clocks/dividers[13].d/Q_reg" located at site "SLICE_X86Y57"
+#startgroup
+create_pblock CLKAG_clocks/dividers[13].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[13].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[13].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[13].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[14].d/clockdivs[0]" driven by instance "clocks/dividers[14].d/Q_reg" located at site "SLICE_X84Y56"
+#startgroup
+create_pblock CLKAG_clocks/dividers[14].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[14].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[14].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[14].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[15].d/clockdivs[0]" driven by instance "clocks/dividers[15].d/Q_reg" located at site "SLICE_X84Y57"
+#startgroup
+create_pblock CLKAG_clocks/dividers[15].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[15].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[15].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[15].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[16].d/clockdivs[0]" driven by instance "clocks/dividers[16].d/Q_reg" located at site "SLICE_X84Y58"
+#startgroup
+create_pblock CLKAG_clocks/dividers[16].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[16].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[16].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[16].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[17].d/clockdivs[0]" driven by instance "clocks/dividers[17].d/Q_reg" located at site "SLICE_X85Y58"
+#startgroup
+create_pblock CLKAG_clocks/dividers[17].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[17].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[17].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[17].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[18].d/clockdivs[0]" driven by instance "clocks/dividers[18].d/Q_reg" located at site "SLICE_X85Y57"
+#startgroup
+create_pblock CLKAG_clocks/dividers[18].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[18].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[18].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[18].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[19].d/clockdivs[0]" driven by instance "clocks/dividers[19].d/Q_reg" located at site "SLICE_X88Y57"
+#startgroup
+create_pblock CLKAG_clocks/dividers[19].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[19].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[19].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[19].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[1].d/clockdivs[0]" driven by instance "clocks/dividers[1].d/Q_reg" located at site "SLICE_X88Y54"
+#startgroup
+create_pblock CLKAG_clocks/dividers[1].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[1].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[1].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[1].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[20].d/clockdivs[0]" driven by instance "clocks/dividers[20].d/Q_reg" located at site "SLICE_X87Y57"
+#startgroup
+create_pblock CLKAG_clocks/dividers[20].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[20].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[20].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[20].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[21].d/clockdivs[0]" driven by instance "clocks/dividers[21].d/Q_reg" located at site "SLICE_X86Y58"
+#startgroup
+create_pblock CLKAG_clocks/dividers[21].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[21].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[21].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[21].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[22].d/clockdivs[0]" driven by instance "clocks/dividers[22].d/Q_reg" located at site "SLICE_X86Y59"
+#startgroup
+create_pblock CLKAG_clocks/dividers[22].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[22].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[22].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[22].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[23].d/clockdivs[0]" driven by instance "clocks/dividers[23].d/Q_reg" located at site "SLICE_X87Y58"
+#startgroup
+create_pblock CLKAG_clocks/dividers[23].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[23].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[23].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[23].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[24].d/clockdivs[0]" driven by instance "clocks/dividers[24].d/Q_reg" located at site "SLICE_X88Y58"
+#startgroup
+create_pblock CLKAG_clocks/dividers[24].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[24].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[24].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[24].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[25].d/clockdivs[0]" driven by instance "clocks/dividers[25].d/Q_reg" located at site "SLICE_X87Y59"
+#startgroup
+create_pblock CLKAG_clocks/dividers[25].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[25].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[25].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[25].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[26].d/clockdivs[0]" driven by instance "clocks/dividers[26].d/Q_reg" located at site "SLICE_X88Y59"
+#startgroup
+create_pblock CLKAG_clocks/dividers[26].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[26].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[26].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[26].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[27].d/clockdivs[0]" driven by instance "clocks/dividers[27].d/Q_reg" located at site "SLICE_X89Y59"
+#startgroup
+create_pblock CLKAG_clocks/dividers[27].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[27].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[27].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[27].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[28].d/clockdivs[0]" driven by instance "clocks/dividers[28].d/Q_reg" located at site "SLICE_X88Y60"
+#startgroup
+create_pblock CLKAG_clocks/dividers[28].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[28].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[28].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[28].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[29].d/clockdivs[0]" driven by instance "clocks/dividers[29].d/Q_reg" located at site "SLICE_X89Y57"
+#startgroup
+create_pblock CLKAG_clocks/dividers[29].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[29].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[29].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[29].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[2].d/clockdivs[0]" driven by instance "clocks/dividers[2].d/Q_reg" located at site "SLICE_X85Y54"
+#startgroup
+create_pblock CLKAG_clocks/dividers[2].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[2].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[2].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[2].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[3].d/clockdivs[0]" driven by instance "clocks/dividers[3].d/Q_reg" located at site "SLICE_X86Y54"
+#startgroup
+create_pblock CLKAG_clocks/dividers[3].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[3].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[3].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[3].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[4].d/clockdivs[0]" driven by instance "clocks/dividers[4].d/Q_reg" located at site "SLICE_X87Y54"
+#startgroup
+create_pblock CLKAG_clocks/dividers[4].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[4].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[4].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[4].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[5].d/clockdivs[0]" driven by instance "clocks/dividers[5].d/Q_reg" located at site "SLICE_X87Y55"
+#startgroup
+create_pblock CLKAG_clocks/dividers[5].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[5].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[5].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[5].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[6].d/clockdivs[0]" driven by instance "clocks/dividers[6].d/Q_reg" located at site "SLICE_X88Y55"
+#startgroup
+create_pblock CLKAG_clocks/dividers[6].d/clockdivs[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[6].d/clockdivs[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[6].d/clockdivs[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[6].d/clockdivs[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[7].d/I1[0]" driven by instance "clocks/dividers[7].d/Q_reg" located at site "SLICE_X89Y55"
+#startgroup
+create_pblock CLKAG_clocks/dividers[7].d/I1[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[7].d/I1[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[7].d/I1[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[7].d/I1[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[8].d/I1[0]" driven by instance "clocks/dividers[8].d/Q_reg" located at site "SLICE_X89Y56"
+#startgroup
+create_pblock CLKAG_clocks/dividers[8].d/I1[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[8].d/I1[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[8].d/I1[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[8].d/I1[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/dividers[9].d/I1[0]" driven by instance "clocks/dividers[9].d/Q_reg" located at site "SLICE_X87Y56"
+#startgroup
+create_pblock CLKAG_clocks/dividers[9].d/I1[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/dividers[9].d/I1[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/dividers[9].d/I1[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/dividers[9].d/I1[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "clocks/first/I1[0]" driven by instance "clocks/first/Q_reg" located at site "SLICE_X89Y53"
+#startgroup
+create_pblock CLKAG_clocks/first/I1[0]
+add_cells_to_pblock [get_pblocks  CLKAG_clocks/first/I1[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/first/I1[0]"}]]]
+resize_pblock [get_pblocks CLKAG_clocks/first/I1[0]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[0].dividers.d/O1" driven by instance "display/cd/genblk1[0].dividers.d/Q_reg" located at site "SLICE_X82Y73"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[0].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[0].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[0].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[0].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[10].dividers.d/O1" driven by instance "display/cd/genblk1[10].dividers.d/Q_reg" located at site "SLICE_X89Y71"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[10].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[10].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[10].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[10].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[11].dividers.d/O1" driven by instance "display/cd/genblk1[11].dividers.d/Q_reg" located at site "SLICE_X88Y71"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[11].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[11].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[11].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[11].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[12].dividers.d/O1" driven by instance "display/cd/genblk1[12].dividers.d/Q_reg" located at site "SLICE_X88Y70"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[12].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[12].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=led_OBUF[14]_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[12].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[12].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[1].dividers.d/O1" driven by instance "display/cd/genblk1[1].dividers.d/Q_reg" located at site "SLICE_X83Y73"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[1].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[1].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[1].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[1].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[2].dividers.d/O1" driven by instance "display/cd/genblk1[2].dividers.d/Q_reg" located at site "SLICE_X84Y73"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[2].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[2].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[2].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[2].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[3].dividers.d/O1" driven by instance "display/cd/genblk1[3].dividers.d/Q_reg" located at site "SLICE_X85Y73"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[3].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[3].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[3].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[3].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[4].dividers.d/O1" driven by instance "display/cd/genblk1[4].dividers.d/Q_reg" located at site "SLICE_X88Y73"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[4].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[4].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[4].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[4].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[5].dividers.d/O1" driven by instance "display/cd/genblk1[5].dividers.d/Q_reg" located at site "SLICE_X88Y74"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[5].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[5].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[5].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[5].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[6].dividers.d/O1" driven by instance "display/cd/genblk1[6].dividers.d/Q_reg" located at site "SLICE_X85Y74"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[6].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[6].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[6].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[6].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[7].dividers.d/O1" driven by instance "display/cd/genblk1[7].dividers.d/Q_reg" located at site "SLICE_X85Y72"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[7].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[7].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[7].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[7].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[8].dividers.d/O1" driven by instance "display/cd/genblk1[8].dividers.d/Q_reg" located at site "SLICE_X85Y71"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[8].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[8].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[8].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[8].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "display/cd/genblk1[9].dividers.d/O1" driven by instance "display/cd/genblk1[9].dividers.d/Q_reg" located at site "SLICE_X87Y71"
+#startgroup
+create_pblock CLKAG_display/cd/genblk1[9].dividers.d/O1
+add_cells_to_pblock [get_pblocks  CLKAG_display/cd/genblk1[9].dividers.d/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="display/cd/genblk1[9].dividers.d/O1"}]]]
+resize_pblock [get_pblocks CLKAG_display/cd/genblk1[9].dividers.d/O1] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "led_OBUF_BUFG[15]" driven by instance "led_OBUF_BUFG[15]_inst" located at site "BUFGCTRL_X0Y0"
+#startgroup
+create_pblock CLKAG_led_OBUF_BUFG[15]
+add_cells_to_pblock [get_pblocks  CLKAG_led_OBUF_BUFG[15]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=led_OBUF[15]_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="led_OBUF_BUFG[15]"}]]]
+resize_pblock [get_pblocks CLKAG_led_OBUF_BUFG[15]] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
